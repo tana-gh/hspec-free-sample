@@ -1,1 +1,0 @@
-# hspec-free-sample

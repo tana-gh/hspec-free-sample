@@ -1,0 +1,67 @@
+cabal-version:      2.4
+name:               hspec-free-sample
+version:            0.1.0.0
+synopsis:
+
+-- A longer description of the package.
+-- description:
+homepage:           https://github.com/tana-gh/hspec-free-sample
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             tana-gh
+maintainer:         yozoranotakaku@gmail.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:
+        HspecFreeSample.App,
+        HspecFreeSample.AppCmd,
+        HspecFreeSample.AppRunner,
+        HspecFreeSample.AskCmd,
+        HspecFreeSample.PrintCmd
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:
+        base ^>=4.14.1.0,
+        free,
+        mtl
+
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable hspec-free-sample
+    main-is:          Main.hs
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:
+        base ^>=4.14.1.0,
+        hspec-free-sample,
+        free,
+        mtl
+
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+test-suite hspec-free-sample-test
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Spec.hs
+    exposed-modules:
+        HspecFreeSample.Spec.AppSpec,
+        HspecFreeSample.Spec.Mock
+    build-depends:
+        base ^>=4.14.1.0,
+        hspec-free-sample,
+        free,
+        hspec,
+        mtl

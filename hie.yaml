@@ -1,2 +1,10 @@
 cradle:
-  stack:
+  cabal:
+    - path: "src"
+      component: "lib:hspec-free-sample"
+
+    - path: "app/Main.hs"
+      component: "hspec-free-sample:exe:hspec-free-sample"
+
+    - path: "test"
+      component: "hspec-free-sample:test:hspec-free-sample-test"

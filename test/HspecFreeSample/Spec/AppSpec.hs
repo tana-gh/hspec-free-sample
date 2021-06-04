@@ -11,4 +11,4 @@ spec =
         it "asks and print are called correctly" $ do
             st <- (`execStateT` initialMockState) . runMock $ runApp app
             asksState  st `shouldBe` [asksCalled]
-            printState st `shouldBe` [asksCalled]
+            printState st `shouldBe` [show $ concat config]

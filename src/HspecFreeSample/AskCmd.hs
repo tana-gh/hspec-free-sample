@@ -8,7 +8,7 @@ import Control.Monad.Free.TH
 import Control.Monad.Trans.Free
 
 data AskCmd s t next
-    = Asks' (s -> t) (Maybe t -> next)
+    = Asks' (s -> t) (t -> next)
     deriving Functor
 
 makeFree ''AskCmd

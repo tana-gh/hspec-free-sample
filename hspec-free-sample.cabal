@@ -30,6 +30,7 @@ library
         HspecFreeSample.AppCmd,
         HspecFreeSample.AppRunner,
         HspecFreeSample.AskCmd,
+        HspecFreeSample.Config,
         HspecFreeSample.PrintCmd
 
     -- Modules included in this library but not exported.
